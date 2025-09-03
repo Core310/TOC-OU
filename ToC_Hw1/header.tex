@@ -1,0 +1,124 @@
+\documentclass[letterpaper,11pt,twoside]{article}
+\usepackage[margin=0.88in]{geometry}
+\usepackage{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\mypdfauthor{Dimitris Diochnos}
+\def\mypdfsubject{Undergraduate Course}
+\def\mypdftitle{CS 3823 - Theory of Computation, 2025F: HW1}
+\def\myheadertitle{CS 3823 - Theory of Computation: Homework Assignment 1}
+\def\mytitle{CS 3823 - Theory of Computation: Homework Assignment 1}
+\def\thecurrentsemester{Fall 2025}
+\def\myduedate{\textbf{Due:} Friday, September 12, 2025}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{xspace}
+\usepackage{enumitem}
+%\usepackage[numbers,square,sectionbib,sort&compress]{natbib}
+\usepackage[numbers,square,sort&compress]{natbib}
+\usepackage[euler-digits, T1]{eulervm}
+\usepackage{upgreek}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[
+   colorlinks%
+   ,plainpages=false%This forces a unique identification of pages.
+   ,hypertexnames=true%This is necessary to have exact link on Index page.
+   ,naturalnames
+   ,hyperindex
+   ,citecolor=OliveGreen
+   ,urlcolor=RoyalBlue
+   ,pdfauthor={\mypdfauthor}
+   ,pdftitle={\mypdftitle}
+   ,pdfsubject={\mypdfsubject}
+   %,pdfkeywords={...}
+]{hyperref}
+%\usepackage{lettrine}
+%\input{definitions}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{multicol}
+%\usepackage{vwcol}
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{bm}
+\usepackage{pstricks}
+\psset{unit=0.45cm}
+\psset{linewidth=0.05}%
+\psset{fillstyle=solid}%
+
+\newcommand{\sample}{\ensuremath{S}\xspace}
+\newcommand{\XX}{\ensuremath{\mathcal{X}}\xspace} % X
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
+
+\setlength{\headheight}{14pt}
+
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+   \fancyfoot[L]{\today}
+   %\fancyfoot[C]{\thepage/\pageref*{LastPage}}
+   \fancyfoot[R]{\thepage/\pageref*{LastPage}}
+}
+
+
+\newcommand{\stylishPagesColor}{Gray}
+\newcommand{\stylishHref}[2]%
+{\hypersetup{urlcolor=\stylishPagesColor}%
+\href{#1}{#2}%
+\hypersetup{urlcolor=RoyalBlue}}
+
+
+\fancyhead{} % clear all header fields
+\fancyhead[CO,CE]{\textsc{\myheadertitle}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LO,RE]{\today}
+\fancyfoot[RO,LE]{\thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+% So that absolute values and norms are neat.
+\usepackage{amsmath}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+\newcommand{\OO}[1]{\ensuremath{\mathcal O\left(#1\right)}\xspace}
+\newcommand{\OOs}[1]{\ensuremath{\widetilde{\mathcal O}\left(#1\right)}\xspace}
+
+% for sets
+\newcommand{\set}[1]{\ensuremath{\left\{ #1 \right\}\xspace}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color}
+\definecolor{RoyalBlue}{cmyk}{1, 0.50, 0, 0}
+\definecolor{ForestGreen}{cmyk}{0.864, 0.0, 0.429, 0.396}
+\definecolor{Brown}{cmyk}{0.0,0.692,0.925,0.529}
+
+\newcommand{\WriteRoyalBlue}[1]{{\color{RoyalBlue} #1 }\xspace}
+\newcommand{\WriteForestGreen}[1]{{\color{ForestGreen} #1 }\xspace}
+\newcommand{\WriteBrown}[1]{{\color{Brown} #1 }\xspace}
+\newcommand{\WriteCustomColor}[1]{{\color{blue} #1 }\xspace}
+\newcommand{\WriteSolutions}[1]{\WriteCustomColor{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\us}{\selectlanguage{american}}
+\newcommand{\gr}{\selectlanguage{greek}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+

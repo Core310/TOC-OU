@@ -1,0 +1,169 @@
+\input{header.tex}
+\begin{document}
+\author{
+\textsc{\thecurrentsemester} \hspace{3cm}\myduedate
+}
+\title{\mytitle}
+\date{}
+\maketitle
+
+\thispagestyle{firststyle}
+
+\vspace{-0.5cm}
+\noindent\makebox[\linewidth]{\rule{\columnwidth}{2pt}}
+
+\input{page_1}
+
+\newpage
+\section{Set Theory [4 points]}
+Let $A$ be the set $\{x, y, z\}$ and $B$ be the set $\{a, b, x\}$.
+\begin{enumerate}[label=(\roman*)]
+\item Is $A$ a subset of $B$ and why?
+\textcolor{blue}{
+\\\textbf{No}, A is not a subset of B because B does not contain all elements of A. 
+Definition of subset: Set B contains all elements of set A and more. \\For example in below, $A$ is a subset of $B$, but if we added a number that isn't 4 to A, it wouldn't be a subset of B.
+$$A=\{1,2\},B=\{1,2,4\}$$
+}
+\item What is $A\cap (B \setminus A)$?
+\textcolor{blue}{
+\\Set Difference: All elements only in left hand set and not in right hand set.
+\\Starting with 
+$$B \setminus A \rightarrow \{ a,b\}=C$$
+Set union: Combine elements in both sets
+$$
+A \cap C= \boxed{\{x,y,z,a,b \}}
+$$
+}
+\item What is $A \times B$? %todo should confirm this is right since easy to fk up
+\textcolor{blue}{
+$$
+\{x, y, z\} \times \{a, b, x\}\rightarrow 
+\{ 
+\{x,a \},
+\{x,b \},
+\{x,x \},
+\{y,a \},
+\{y,b \},
+\{y,x \},
+\{z,a \},
+\{z,b \},
+\{z,x \}
+\}
+$$
+}
+
+\item What is the powerset of $B$?
+\textcolor{blue}{
+Where $B=\{a, b, x\}$, powerset provides $2^n$ subsets (where n is number of elements), and is all subsets (including empty and the set itself).
+\begin{gather*}
+\mathcal{P} (B)\rightarrow \\ \{
+\{\epsilon \},%todo is this how he denotes empty sets?
+\{a, b, x\},
+\{a \},
+\{b \},
+\{x \},
+\{a,b \},
+\{b,x \},
+\{a,x \}
+\}
+\end{gather*}
+}
+\end{enumerate}
+
+\newpage
+\section{Induction [4 points]}
+Prove by induction on $k$ that for all integers $k \ge 4$ it holds that $k! > 2^k$.
+
+
+\newpage
+\section{Drawing State Diagrams [12 points; 4 points each]}\label{sec:drawing}
+Draw state diagrams for DFAs recognizing the following languages:
+\begin{enumerate}[label=(\roman*)]
+\item $L_1 = \{w \mid \text{length of \ensuremath{w} is odd}\}, \Sigma = \{1\}$.
+\item $L_2 = \{w \mid \mbox{\ensuremath{w} has at most two occurrences of the symbol \ensuremath{b}}\}, \Sigma = \{a, b\}$.
+\item $L_3 = \{w \mid \mbox{\ensuremath{w} starts with an \ensuremath{1} or ends with a \ensuremath{0}}\}, \Sigma = \{0, 1\}$.
+\end{enumerate}
+
+
+
+\newpage
+\begin{center}\textbf{(blank space in case you need it for exercise \ref{sec:drawing})}\end{center}
+
+
+\newpage
+\section{Interpreting State Machines [12 points]}\label{sec:interpreting}
+Let $\Sigma = \{0, 1\}$.
+For each of the following DFAs explain what language they recognize.%\\[0.25cm]
+
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{[6 points]}
+Please see the DFA of machine $M_1$ below.
+\begin{figure}[h]
+\begin{center}
+{
+\psfrag{0}{$0$}\psfrag{1}{$1$}
+\psfrag{0,1}{$0,1$}
+\psfrag{q0}{$q_0$}\psfrag{q1}{$q_1$}\psfrag{q2}{$q_2$}\psfrag{q3}{$q_3$}
+\includegraphics[width=0.5\columnwidth]{figs/dfa2}
+}
+\end{center}
+\end{figure}
+For this machine $M_1$, also give its formal description as a 5-tuple. 
+You do not need to do this for the machine $M_2$ that follows in part (ii).
+\end{enumerate}
+
+\newpage
+{\begin{center}\textbf{(continuation of exercise \ref{sec:interpreting})}\end{center}}
+\begin{enumerate}[label=(\roman*)]\setcounter{enumi}{1}
+\item \textbf{[6 points]}
+Please see the DFA of machine $M_2$ below.
+\begin{figure}[h]
+\begin{center}
+{
+\psfrag{0}{$0$}\psfrag{1}{$1$}
+\psfrag{0,1}{$0,1$}
+\psfrag{q0}{$q_0$}\psfrag{q1}{$q_1$}\psfrag{q2}{$q_2$}\psfrag{q3}{$q_3$}
+\psfrag{q4}{$q_4$}\psfrag{q5}{$q_5$}\psfrag{q6}{$q_6$}\psfrag{q7}{$q_7$}
+\includegraphics[width=0.5\columnwidth]{figs/dfa3}
+}
+\end{center}
+\end{figure}
+
+\end{enumerate}
+
+
+
+
+
+
+
+\newpage
+\section{Closure [4 points]}
+Let $A$ and $B$ be regular languages.  Show that $A\setminus B$ is also regular.\\ 
+Recall that $A\setminus B = \{x\in A \mid x \not\in B\}$. 
+In other words, this operation removes from $A$ all the strings that are also in $B$.
+
+
+
+
+
+
+
+
+\newpage
+\section{Assigned Reading Question [4 points]}
+Please read the Quanta article \emph{Computation Is All Around Us, and You Can See It if You Try}, by Lance Fortnow.  The article is available at the link below:
+\begin{center}
+{\small\href{https://www.quantamagazine.org/computation-is-all-around-us-and-you-can-see-it-if-you-try-20240612/}{https://www.quantamagazine.org/computation-is-all-around-us-and-you-can-see-it-if-you-try-20240612/}}
+\end{center}
+After reading this article, please answer the question below.
+
+\medskip
+
+\noindent\underline{Question:}
+Does Lance Fortnow believe that randomness is unpredictable?  Justify your answer.
+
+
+
+
+\end{document}
