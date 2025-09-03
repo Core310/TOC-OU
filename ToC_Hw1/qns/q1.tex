@@ -1,0 +1,56 @@
+\newpage
+\section{Set Theory [4 points]}
+Let $A$ be the set $\{x, y, z\}$ and $B$ be the set $\{a, b, x\}$.
+\begin{enumerate}[label=(\roman*)]
+\item Is $A$ a subset of $B$ and why?
+\textcolor{blue}{
+\\\textbf{No}, A is not a subset of B because B does not contain all elements of A. 
+Definition of subset: Set B contains all elements of set A and more. \\For example in below, $A$ is a subset of $B$, but if we added a number that isn't 4 to A, it wouldn't be a subset of B.
+$$A=\{1,2\},B=\{1,2,4\}$$
+}
+\item What is $A\cap (B \setminus A)$?
+\textcolor{blue}{
+\\Set Difference: All elements only in left hand set and not in right hand set.
+\\Starting with 
+$$B \setminus A \rightarrow \{ a,b\}=C$$
+Set union: Combine elements in both sets
+$$
+A \cap C= \boxed{\{x,y,z,a,b \}}
+$$
+}
+\item What is $A \times B$? %todo should confirm this is right since easy to fk up
+\textcolor{blue}{
+$$
+\{x, y, z\} \times \{a, b, x\}\rightarrow 
+\{ 
+\{x,a \},
+\{x,b \},
+\{x,x \},
+\{y,a \},
+\{y,b \},
+\{y,x \},
+\{z,a \},
+\{z,b \},
+\{z,x \}
+\}
+$$
+}
+
+\item What is the powerset of $B$?
+\textcolor{blue}{
+Where $B=\{a, b, x\}$, powerset provides $2^n$ subsets (where n is number of elements), and is all subsets (including empty and the set itself).
+\begin{gather*}
+\mathcal{P} (B)\rightarrow \\ \{
+\{\epsilon \},%todo is this how he denotes empty sets?
+\{a, b, x\},
+\{a \},
+\{b \},
+\{x \},
+\{a,b \},
+\{b,x \},
+\{a,x \}
+\}
+\end{gather*}
+}
+\end{enumerate}
+
